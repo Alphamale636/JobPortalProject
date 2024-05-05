@@ -1,0 +1,148 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Feedback
+{
+    position: relative;
+    display: grid;
+    min-height: 870px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .Feedback .cardbox
+{
+    overflow-y: auto;
+}
+.details .Feedback .cardbox
+ {
+    max-height: calc(100% + 650px);
+}
+.details .Feedback .FeedbackHeader
+{
+    height: 60px;
+
+}
+
+.details .Feedback .FeedbackHeader ion-icon
+{
+    position: relative;
+    top: 10px;
+    font-size: 1.5em;
+}
+.textheader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 3;
+
+}
+.textheader .text 
+{
+    position: relative;
+    font-size: 1.25em;
+    top: 40px;
+    font-weight: 500;
+}
+.textheader .text a
+{
+    font-weight: 700;
+    color: #152935;
+}
+.textheader .all a
+{
+        position: relative;
+        padding: 5px 10px ;
+        top: 30px;
+        left: 10px;
+        cursor: pointer;
+        background: #152935;
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 6px;
+        z-index: 5;
+}
+
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    top: 40px;
+    padding: 40px;
+    display: grid;
+}
+.cardbox .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 15px;
+    top: 10px;
+    margin-bottom: 15px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.card:hover
+{
+    box-shadow: 0 7px 25px rgba(0,0,0,10);
+    border: 1px solid #999;
+}
+
+.card .message
+{
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 600px;;
+}
+
+.card .message a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color:#152935;
+    
+}
+.card ion-icon
+{
+    color: #999;
+    position: relative;
+    margin-top: -20px;
+    
+}
+.card ion-icon:hover
+{
+    color: #152935;
+}
+.card .View
+{
+    position: relative;
+    width: 200px;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.card .View a
+{
+    color: black;
+}
+.card .View a:hover
+{
+    color: #999;
+}

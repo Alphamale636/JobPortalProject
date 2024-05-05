@@ -1,0 +1,120 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Notification
+{
+    position: relative;
+    display: grid;
+    min-height: 870px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .Notification .cardbox
+{
+    overflow-y: auto;
+}
+.details .Notification .cardbox
+ {
+    max-height: calc(100% + 650px);
+}
+.details .Notification .NotificationHeader
+{
+    height: 60px;
+}
+
+.details .Notification .NotificationHeader ion-icon
+{
+    position: relative;
+    top: 10px;
+    font-size: 1.5em;
+}
+.textheader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.textheader .text 
+{
+    position: relative;
+    font-size: 1.25em;
+    top: 40px;
+    font-weight: 500;
+}
+.textheader .text a
+{
+    font-weight: 700;
+    color: #152935;
+}
+.textheader .all a
+{
+        position: relative;
+        padding: 5px 10px ;
+        top: 30px;
+        left: 10px;
+        cursor: pointer;
+        background: #152935;
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 6px;
+        z-index: 100;
+}
+
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    top: 40px;
+    padding: 30px;
+    display: grid;
+}
+.cardbox .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 15px;
+    top: 10px;
+    margin-bottom: 15px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    z-index: 1;
+}
+
+
+.card .message
+{
+    word-spacing: 0.2em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.card .message a
+{
+    font-size: 20px;
+    color:#152935;
+}
+.card ion-icon
+{
+    color: #999;
+    position: relative;
+    margin-top: -5px;
+    
+}
+.card ion-icon:hover
+{
+    color: #152935;
+}

@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body
+ {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+body::before
+ {
+    content: "";
+    background-color: #152935;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    top:40px;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: #152935;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #152935;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #152935;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: #152935;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: #999;
+    cursor: pointer;
+    color: #152935;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  .select-container {
+    position: relative;
+    width: 185px;
+    height: 52px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .select {
+    display: none;
+  }
+  
+  .custom-dropdown {
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  
+  .selected-option {
+    display: block;
+    padding: 10px;
+    width: 170px;
+    cursor: pointer;
+    background-color: #fff;
+    color: grey;
+    font-size: 0.9em;
+    margin-top: 4px;
+    margin-left: 3px ;
+  }
+ 
+  .options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: none;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-top: none;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .options li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options li:hover {
+    background-color: #999;
+    color:#152935;
+  }
+
+  .select-container1 {
+    position: relative;
+    width: 185px;
+    height: 52px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  .selected-option1 {
+    display: block;
+    padding: 10px;
+    width: 170px;
+    cursor: pointer;
+    background-color: #fff;
+    color: grey;
+    font-size: 0.9em;
+    margin-top: 4px;
+    margin-left: 3px ;
+  }
+ 
+  .options1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: none;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-top: none;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .options1 li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options1 li:hover {
+    background-color: #999;
+    color:#152935;
+  }
+  .select-container2 {
+    position: relative;
+    width: 185px;
+    height: 52px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  .selected-option2 {
+    display: block;
+    padding: 10px;
+    width: 170px;
+    cursor: pointer;
+    background-color: #fff;
+    color: grey;
+    font-size: 0.9em;
+    margin-top: 4px;
+    margin-left: 3px ;
+  }
+ 
+  .options2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: none;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-top: none;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .options2 li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options2 li:hover {
+    background-color: #999;
+    color:#152935;
+  }
+
+  .select-container3 {
+    position: relative;
+    width: 125px;
+    height: 52px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    z-index: 50;
+  }
+  .selected-option3 {
+    display: block;
+    padding: 10px;
+    width: 107px;
+    cursor: pointer;
+    background-color: #fff;
+    color: grey;
+    font-size: 0.9em;
+    margin-top: 4px;
+    margin-left: 3px ;
+
+  }
+ 
+  .options3 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: none;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-top: none;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .options3 li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options3 li:hover {
+    background-color: #999;
+    color:#152935;
+  }
+
+  .select #experience
+   {
+    position: relative;
+    width: 10px;
+   }
+
+  #profilepicture
+  {
+    position: relative;
+    left: 15px;
+    top: -3px;
+  }
+  .dp
+  {
+    border: 1px solid grey;
+    color: #999;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    left:4px;
+    width: 84%;
+    border: 1px solid rgba(105, 105, 105, 0.397)
+  }

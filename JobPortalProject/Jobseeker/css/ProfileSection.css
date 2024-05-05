@@ -1,0 +1,164 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Profile
+{
+    position: relative;
+    display: grid;
+    min-height: 860px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .Profile .ProfileHeader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;    
+}
+.details .Profile .ProfileHeader h2
+{
+    font-weight: 600;
+    color: #152935;
+}
+.ProfileHeader ion-icon
+{
+    font-size: 1.75em;
+}
+.details .Profile .ProfileHeader .user
+{
+   
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.details .Profile .ProfileHeader .user img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details .Profile table td a
+{
+    font-size: 1.25em;
+}
+.details .Profile table td 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.details table
+{  
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: px;
+}
+.details table th
+{
+    padding-right: 100px;
+    font-weight: 600;
+}
+
+.details .Profile table tr
+{
+
+    color: #222;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.details .Profile table tr:last-child
+{
+    border-bottom: none;
+}
+
+.btns
+{
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;    
+}
+.btns ion-icon
+{
+    position: relative;
+    top: 1px;
+}
+.edit a
+{
+    position: relative;
+    padding: 5px 10px ;
+    top: 30px;
+    left: 10px;
+    background: #152935;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.edit a:hover
+{
+    color: #999;
+}
+
+.password a
+{
+    position: relative;
+    padding: 5px 10px ;
+    top: 32px;
+    left: 10px;
+    background: #152935;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.password a:hover
+{
+    color: #999;
+}
+table td textarea
+{
+    position: relative;
+    width: 80%;
+    top: -5px;
+    height: 50px;
+    outline:none;
+    overflow: auto;
+    border:none;
+    resize: none;
+    font-size: 1em;
+    overflow-y: auto ;
+}
+td #resumeanchor
+{
+    color: black;
+     font-size: 1em;
+      transition: 0.3s;
+       position: relative;
+
+}
+td #resumeanchor:hover
+{
+    color:#999;
+}

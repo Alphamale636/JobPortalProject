@@ -1,0 +1,175 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Report
+{
+    position: relative;
+    display: grid;
+    min-height: 750px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .Report .ReportHeader
+{
+    height: 60px;
+}
+
+.details .Report .ReportHeader ion-icon
+{
+    position: relative;
+    top: 10px;
+    font-size: 1.5em;
+}
+.textheader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.textheader .text 
+{
+    position: relative;
+    font-size: 1.25em;
+    top: 40px;
+    font-weight: 600;
+}
+
+.textheader .ratingtext
+{
+    position: relative;
+    font-weight: 600;
+    font-size: 1.25em;
+    right: 40px;
+    top: 40px;
+} 
+.UploadCard
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 30px;
+}
+.UploadCard .Uploadbtn ion-icon
+{
+    padding: 0px 0px 3px 0px;
+}
+.UploadCard .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 200px;
+    height: 500px;
+    top:50px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.UploadCard .card .datepk h4
+{
+    position: relative;
+    left: -20px;
+}
+.UploadCard .card .datepk #datepicker
+{
+    position: relative;
+    top: -27px;
+}
+
+.UploadCard .card .iconbx ion-icon
+{
+font-size: 2.25em;
+position: relative;
+margin-top: -10px;
+left:80px;
+}
+
+.UploadCard .card input
+{
+    font-size: 1.25em;
+    position: relative;
+    left: 90px;
+}
+
+.UploadCard .Uploadbtn a
+{
+    position: relative;
+    top:20px;
+    width: auto;
+    left: 120px;
+    padding: 5px 10px ;
+    background: #152935;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.Uploadbtn a:hover
+{
+    color: #999;
+}
+
+.UploadCard .card1
+{
+position: relative;
+background: var(--white);
+padding: 30px;
+height: 500px;
+top:50px;
+border-radius: 20px;
+display: grid;
+place-items: center;
+cursor: pointer;
+box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.card1 .TextContent
+{
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    color:#152935;
+    font-size: 1.6em;
+    justify-content: center;
+    align-items: center;
+    color:#999;
+    top:-20px;
+
+}
+.DownloadReportBtn a
+{
+
+    position: relative;
+    top:250px;
+    width: auto;
+    left: -220px;
+    padding: 5px 10px ;
+    background: #152935;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.DownloadReportBtn ion-icon
+{
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.DownloadReportBtn a:hover
+{
+    color: #999;
+}

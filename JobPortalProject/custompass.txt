@@ -1,0 +1,236 @@
+glpm yxqv jjas absi
+
+
+
+
+
+
+
+              <?php
+                            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                // Retrieve the form data
+                                $searchValue = $_POST['searchField'];
+                                $industryValue = $_POST['industry'];
+                                $jobTypeValue = $_POST['jobtype'];
+                    
+                                // Check if at least one filter is set
+                                if (empty($searchValue) && empty($industryValue) && empty($jobTypeValue)) {
+                                    echo '<script>alert("Enter a Search Item or Filter");</script>';
+                                    echo '<script>window.location.href = "Jobseekermanage.php";</script>';
+                                }
+                                if (!empty($searchValue)) {
+                                    $searchValue = mysqli_real_escape_string($conn, $searchValue); // Sanitize input to prevent SQL injection
+                                
+                                    // Build your SQL query to search the "jobseekerprofiles" table
+                                    $query = "SELECT `first_name`, `last_name`, `experience`, `skills`, `availability`, `profile_picture`
+                                              FROM `jobseekerprofiles`
+                                              WHERE `first_name` LIKE '%$searchValue%'
+                                              OR `last_name` LIKE '%$searchValue%'
+                                              OR `skills` LIKE '%$searchValue%'
+                                              OR `availability` LIKE '%$searchValue'";
+                                
+                                    $result = mysqli_query($conn, $query);
+                                }
+                            if (!empty($searchValue)) {
+                               
+                               
+                            
+                                // Retrieve the form data
+                                $searchValue = $_POST['searchField'];
+                            
+                                
+                            
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $firstname = $row["first_name"];
+                                        $lastname = $row["last_name"];
+                                        $experience = $row["experience"];
+                                        $skills = $row["skills"];
+                                        $availability = $row["availability"];
+                                        $profilePictureURL1 = $row['profile_picture'];
+                                        
+                                        // Output the retrieved data and replace the default code below
+                            
+                                        ?>
+                                        <div class="card">
+                                            <div class="profpic">
+                                                <?php
+                                                 $parentDirectory = '../'; // Go back one directory
+                                                $profilePictureURL1 = $parentDirectory . $profilePictureURL1;
+                                                echo '<img src="'. $profilePictureURL1 . '" onerror="this.src=\'../images/user.png\';">';
+                                                ?>
+                                            </div>
+                                            <div class="Candname">
+                                                <h4><?php echo $firstname . " " . $lastname; ?></h4>
+                                            </div>
+                                            <div class="Candexp">Experience : <?php echo $experience; ?></div>
+                                            <div class="Candskills">
+                                                <h4>View Skills</h4>
+                                                <div class="Skillbox">
+                                                    <div><?php echo $skills; ?></div>
+                                                </div>
+                                                <span><?php echo $availability; ?></span>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                } else {
+                                    echo "No results found.";
+                                }
+                            
+                                // Close the database connection
+                                mysqli_close($conn);
+                            }
+                            } else {
+
+                            $sql = "SELECT `first_name`, `last_name`, `experience`, `skills`, `availability`, `profile_picture` FROM jobseekerprofiles ORDER BY joineddate DESC";
+                            $result = $conn->query($sql);
+                   
+
+                        if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                        $firstname = $row["first_name"];
+                        $lastname = $row["last_name"];
+                        $experience = $row["experience"];
+                        $skills = $row["skills"];
+                        $availability = $row["availability"];
+                        $profilePictureURL1 = $row['profile_picture'];
+                        ?>
+        
+                            <div class="card">
+                                <div class="profpic">
+                                 
+                              <?php
+                              $parentDirectory = '../'; // Go back one directory
+                              $profilePictureURL1 = $parentDirectory . $profilePictureURL1;
+                               echo '<img src="'. $profilePictureURL1 . '" onerror="this.src=\'../images/user.png\';">';?> 
+                                
+    
+                                </div>
+                                <div class="Candname">
+                                    <h4><?php echo $firstname;echo" "; echo $lastname ;?></h4></div>
+                                    <div class="Candexp">Experience : <?php echo $experience;?></div> 
+                               
+                                <div class="Candskills">
+                                    <h4>View Skills</h4>
+                                    <div class="Skillbox">
+                                        <div><?php echo $skills; ?>
+                                        </div> 
+                                    </div>
+                                    <span><?php echo $availability; ?></span>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                     echo "No job seekers found.";
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+                //report
+
+                 if (data.length > 0) {
+                        // Generate the report content
+                        var reportContent = "Report for Date: " + selectedDate + "\n\n";
+                        
+                        // Loop through the data and add it to the report content
+                        data.forEach(function (item) {
+                            reportContent += "JobSeeker Data " + "\n";
+                            reportContent += "ID: " + item.user_id + "\n";
+                            reportContent += "First Name: " + item.first_name + "\n";
+                            reportContent += "Last Name " + item.last_name + "\n";
+                            reportContent += "Email " + item.email + "\n";
+                            reportContent += "Contact Number " + item.contact_number + "\n";
+                            reportContent += "Last Login " + item.last_login + "\n";
+                            reportContent += "\n"; // Add a line break for separation
+                        });
+                        
+                        // fetched data from the employerprofiles table and stored it in the data array
+                        data.forEach(function (item) {
+                            reportContent += "Employer Data " + "\n";
+                            reportContent += "ID: " + item.employer_id + "\n";
+                            reportContent += "Company Name: " + item.company_name + "\n";
+                            reportContent += "Email: " + item.email + "\n";
+                            reportContent += "Location: " + item.location + "\n";
+                            reportContent += "Industry: " + item.industry + "\n";
+                            reportContent += "Last Login: " + item.last_login + "\n";
+                            reportContent += "\n"; // Add a line break for separation
+                        });
+
+
+                            // fetched data from the joblistings table and stored it in the data array
+                            data.forEach(function (item) {
+                                reportContent += "Job Listings Data " + "\n";
+                                reportContent += "ID: " + item.job_id + "\n";
+                                reportContent += "Job Title: " + item.jobtitle + "\n";
+                                reportContent += "Posted By Employer ID: " + item.employer_id + "\n";
+                                reportContent += "Job Level: " + item.joblevel + "\n";
+                                reportContent += "Salary: " + item.salary + "\n";
+                                reportContent += "\n"; // Add a line break for separation
+                            });
+
+
+
+
+                        // Set the report content to the TextContent element
+                        var textContentElement = document.getElementById("TextContent");
+                        textContentElement.textContent = reportContent;
+                        
+                        // Show the "Download Report" button
+                        var downloadReportBtn = document.getElementById("downloadReportBtn");
+                        downloadReportBtn.style.display = "block";
+                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         //reportgeneration randomness        
+            const generateReportBtn = document.getElementById('generateReportBtn');
+            const reportStatus = document.getElementById('TextContent');
+            const downloadReportBtn = document.getElementById('downloadReportBtn');
+            const card1 = document.querySelector('.TextContent');
+
+
+            generateReportBtn.addEventListener('click', () => {
+ 
+            const reportGeneratedSuccessfully = Math.random() < 0.5;
+
+            if (reportGeneratedSuccessfully)
+            {
+        
+            reportStatus.textContent = 'Report Generated Successfully';
+            downloadReportBtn.style.display = 'block';
+            card1.style.position = 'relative';
+            card1.style.left = '60px';
+            card1.style.color = '#152935';
+            } 
+            else
+            {
+        
+             reportStatus.textContent = 'Failed To Generate Report. Please Check The Entered Date.';
+             downloadReportBtn.style.display = 'none'
+             card1.style.padding = '40px';
+             card1.style.color = '#152935';
+            }
+            });

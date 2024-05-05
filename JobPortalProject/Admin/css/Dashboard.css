@@ -1,0 +1,193 @@
+
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 30px;
+}
+
+.cardbox .card
+{
+position: relative;
+background: var(--white);
+padding: 30px;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+cursor: pointer;
+box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.cardbox .card .numbers
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: #152935;
+}
+
+.cardbox .card .cardname
+{
+    color: #999;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardbox .card .iconbx
+{
+    font-size: 3.5em;
+    color: #999;
+}
+
+.cardbox .card:hover
+{
+     background: #152935;
+}
+.cardbox .card:hover .numbers,
+.cardbox .card:hover .cardname,
+.cardbox .card:hover .iconbx
+{
+    color: var(--white);
+}
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Recentusers
+{
+    position: relative;
+    display: grid;
+    height: 650px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    overflow-y: hidden;
+}
+
+
+.details .Recentusers.active .tablecontainer 
+ {
+
+    overflow-y: auto;
+}
+
+.details .Recentusers .cardheader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  
+    max-height: 60px;
+}
+.details .Recentusers .cardheader h2
+{
+    font-weight: 600;
+    color: #152935;
+}
+.btn
+{
+    padding: 5px 10px;
+    background: #152935;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.details .tablecontainer
+{
+    position: relative;
+    width: 100%;
+    left: 10px;
+    min-height: 530px;
+    overflow-y: hidden;
+}
+.details table 
+{   
+    width: 98%;
+    border-collapse: collapse;
+    position: absolute;
+}
+.details table thead td
+{
+    position: sticky;
+    top: 0;
+    background: white;
+    color: black;
+    font-weight: 600;
+}
+.details .Recentusers table tr
+{
+    color: #222;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.details .Recentusers table tbody tr td
+{
+    height: 48px;
+}
+.details .Recentusers table tbody tr td:nth-child(1)
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.details .Recentusers table tbody tr td:nth-child(4)
+{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.details .Recentusers table tr:last-child
+{
+    border-bottom: none;
+}
+.details .Recentusers table tbody tr:hover 
+{
+    background: #152935;
+    color: var(--white);
+}
+
+.details .Recentusers table tr td
+{
+    padding: 10px;
+}
+.details .Recentusers table tr td:last-child
+{
+    text-align: end;
+}
+.details .Recentusers table tr td:nth-child(2)
+{
+    text-align: center;
+}
+.details .Recentusers table tr td:nth-child(3)
+{
+    text-align: center;
+}
+.applicantnumber
+{
+    font-weight: 500;
+}
+.details .Graphcard
+{
+    position: relative;
+    display: grid;
+    min-height: 650px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.Graphcard .chart
+{
+    position: relative;
+    top: 100px;
+}

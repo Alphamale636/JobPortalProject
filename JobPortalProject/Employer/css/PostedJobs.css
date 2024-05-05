@@ -1,0 +1,188 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Applicants
+{
+    position: relative;
+    display: grid;
+    min-height: 870px;
+    max-height: 870px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    overflow-y: hidden;
+}
+.details .Applicants.active .cardbox
+{
+    overflow-y: auto;
+}
+.details .Applicants .cardbox
+ {
+    max-height: calc(100% - 170px);
+}
+.details .Applicants .ApplicantsHeader
+{
+    height: 60px;
+}
+
+.details .Applicants .ApplicantsHeader ion-icon
+{
+    position: relative;
+    top: 10px;
+    font-size: 1.5em;
+}
+.details .Applicants .Candskills .viewskill .Skillbox
+{
+    position: absolute;
+    top: 1px;
+    right: 135px;
+    padding: 20px;
+    max-height: 100px;
+    width: 900px;
+    background: #152935;
+    color: white;
+    border: 1px solid #999;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.20s;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.details .Applicants .Candskills .viewskill:hover .Skillbox
+{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.details .Applicants .skillbox div
+{
+    padding: 12px 20px;
+}
+.textheader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    top:40px;
+}
+.textheader .text 
+{
+    position: relative;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+.textheader .text a
+{
+    font-weight: 700;
+    color: #152935;
+}
+.textheader .all a
+{
+        position: relative;
+        padding: 5px 10px ;
+        left: 10px;
+        cursor: pointer;
+        background: #152935;
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 6px;
+}
+
+.cardbox
+{
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    padding: 30px;
+    display: grid;
+}
+.cardbox .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 40px;
+    margin-bottom: 25px;
+    height: 110px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.company .user
+{
+  position: relative;
+  top: -15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.company img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.cardbox .card:hover
+{
+    box-shadow: 0 7px 25px rgba(0,0,0,10);
+    border: 1px solid #999;
+}
+
+
+.companypost div
+{
+    margin-top: -5px;
+}
+.JobDescription h4
+{
+    position: relative;
+    left: -150px;
+    width: 250px;
+}
+.dateSalary 
+{
+    margin-top: -10px;
+}
+.companypost
+{
+    width:350px;
+}
+.cardbox .card:hover
+{
+    border: 2px solid #999;
+}
+.dateSalary h4
+{
+    width: 120px;
+}
+.dateSalary span
+{
+    width: 120px;
+}
+

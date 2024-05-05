@@ -1,0 +1,67 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.model {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    z-index: 1001;
+    display: none;
+}
+.model .model-content
+{
+    position: relative;
+    background: #152935;
+    color:#fff;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);   
+}
+.model .confirmationtext
+{
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.25em;
+}
+.model .buttoncontainer
+{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.model .model-content button
+{
+    padding: 5px;
+    position: relative;
+    font-size: 1.25em;
+    background: #152935;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 6px;
+    width: 4vw;
+}
+.model .model-content button:hover
+{
+    background: white;
+    color: #152935;
+}

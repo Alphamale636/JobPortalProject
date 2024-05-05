@@ -1,0 +1,168 @@
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+
+.details .Postjobs
+{
+    position: relative;
+    display: grid;
+    min-height: 850px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .Postjobs .PostjobsHeader
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;    
+}
+.details .Postjobs .PostjobsHeader h2
+{
+    font-weight: 600;
+    color: #152935;
+}
+.PostjobsHeader ion-icon
+{
+    font-size: 1.75em;
+}
+.details .Postjobs .PostjobsHeader .user
+{
+   
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.details .Postjobs .PostjobsHeader .user img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details .Postjobs table td a
+{
+    font-size: 1.25em;
+}
+.details .Postjobs table td 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+.details .Postjobs table td input
+{
+    position: relative;
+    margin-top:20px;
+    outline:none;
+    border:none;
+    width:100%;
+}
+.details .Postjobs table td select
+{
+    position: relative;
+    margin-top:20px;
+    outline:none;
+    border:none;
+    width:150px;
+    border-bottom: 1px solid #152935;
+}
+.details table
+{  
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: px;
+}
+.details table th
+{
+    height: 75px;
+    padding-right: 100px;
+    font-weight: 600;
+}
+
+.details .Postjobs table tr
+{
+    color: #222;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.details .Postjobs table tr:last-child
+{
+    border-bottom: none;
+}
+.details .Postjobs table tr:nth-child(13)
+{
+    border-bottom: none;
+}
+.btns
+{
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;  
+}
+.btns ion-icon
+{
+    position: relative;
+    top: 2px;
+
+}
+.post a
+{
+    position: relative;
+    padding: 5px 10px ;
+    top: 60px;
+    left: 10px;
+    background: #152935;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.post a:hover
+{
+    color: #999;
+}
+
+.password a
+{
+    position: relative;
+    padding: 5px 10px ;
+    top: 30px;
+    left: 10px;
+    background: #152935;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.password a:hover
+{
+    color: #999;
+}
+table td textarea
+{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    outline:none;
+    overflow: auto;
+    border:none;
+    resize: none;
+    font-size: 1em;
+}
